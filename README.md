@@ -4,12 +4,14 @@ Private working repository for Twillory creative strategy and production, led by
 
 ## Start here
 
+- [WORKFLOW.md](WORKFLOW.md): stage-by-stage runbook from Conversation Scan through launch and learning.
+
 - [PROCESS.md](PROCESS.md): complete workflow, canonical skill references, fresh-research rules and Monday verification/recovery.
 
 - [AGENTS.md](AGENTS.md): operating rules and production handoffs.
 - [PROJECT_STATUS.md](PROJECT_STATUS.md): completed work, outstanding work, and weekly targets.
 
-Read all three before starting work. Check current testing-plan files and Monday tasks before making concept-level claims or creating production tasks.
+Start with WORKFLOW.md and read the relevant references before starting work. Check current testing-plan files and Monday tasks before making concept-level claims or creating production tasks.
 
 ## Purpose
 
