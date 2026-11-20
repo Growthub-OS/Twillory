@@ -125,3 +125,7 @@ Updated [the workflow](WORKFLOW.md#3-weekly-testing-plan) and [the plan-card con
 ## Monday assignment guide, November 20, 2026
 
 Added the [Monday assignment guide](WORKFLOW.md#monday-assignment-guide) for creator sourcing, video editing, and design. The guide gives the owner, asset type, source, status, shared fields, and read-back checks for each route and links to the detailed board rules.
+
+## Monday assignment field checklist, November 20, 2026
+
+Updated the [assignment guide](WORKFLOW.md#monday-assignment-guide), [board field matrix](PROCESS.md#8-monday-prepare-write-verify-recover), and agent instructions. Juan’s sourcing handoff sets main Status to Materials Needed and preserves UGC Status. The guide now lists the fields to fill, including Campaign, Landing Page, Due Date and UGC Due when confirmed, and the separate UGC Manager visibility check.
