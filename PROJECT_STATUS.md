@@ -101,3 +101,7 @@ Status: COPY REVIEW DRAFTS. Approved source photography/brand file links and fin
 Current plan: 23 test families / 36 planned documents; durability hold excluded. This batch drafts 3 of the 36 documents. Remaining 33 are not claimed complete. Existing November 5-9 conversation research and November 3-9 performance evidence were used as dated inputs, not represented as a newly run scan or performance pull.
 
 Remaining core work: men's briefing/scripts, remaining women's briefing/scripts, men's persona finalization, women's persona development and Higgsfield + GPT/Claude statics setup.
+
+## Ad Account Performance Insights documentation, November 20, 2026
+
+Documented the [Twillory workflow](.agents/skills/twillory-ad-account-performance-insights/SKILL.md) and linked it from the playbook. The guide covers reporting windows, ROAS targets, ad-level evidence, scaling recommendations and spend-weighted testing allocation.
