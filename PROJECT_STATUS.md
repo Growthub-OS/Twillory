@@ -121,3 +121,7 @@ Updated the [Ad Account Performance Insights skill](.agents/skills/twillory-ad-a
 ## Foreplay reference and testing-plan formats, November 20, 2026
 
 Updated [the workflow](WORKFLOW.md#3-weekly-testing-plan) and [the plan-card contract](PROCESS.md#4-weekly-testing-plan-men-and-women) to require HTML testing plans, visible Foreplay thumbnails on concept cards, and public Foreplay video and photo links in briefs.
+
+## Monday assignment guide, November 20, 2026
+
+Added the [Monday assignment guide](WORKFLOW.md#monday-assignment-guide) for creator sourcing, video editing, and design. The guide gives the owner, asset type, source, status, shared fields, and read-back checks for each route and links to the detailed board rules.
