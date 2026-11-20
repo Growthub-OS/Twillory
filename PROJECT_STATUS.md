@@ -109,3 +109,7 @@ Documented the [Twillory workflow](.agents/skills/twillory-ad-account-performanc
 ## Creative workflow documentation, November 20, 2026
 
 Added the [stage-by-stage creative workflow](WORKFLOW.md) from Conversation Scan through launch and learning, including the handoff and verification checks for each stage. Linked it from README.md and made it the starting point in AGENTS.md. Launch routing and task status continue to require live verification. Zach’s exact deliverable and handoff timing remain open.
+
+## Conversation Scan source coverage, November 20, 2026
+
+Expanded the [required source list](PROCESS.md#required-source-coverage) and [workflow summary](WORKFLOW.md#1-conversation-scan) to document open-web category research, independent style blogs, Facebook Groups, video and comment coverage, Twillory ad comments, and competitor reviews. Documented how to date and label evidence and record access gaps.
