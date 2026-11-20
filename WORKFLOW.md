@@ -54,14 +54,32 @@ Use the [Twillory Creative Production board](https://twillory-company.monday.com
 
 | Work | Who goes in Editor | Asset Type | Source | Status at handoff |
 | --- | --- | --- | --- | --- |
-| Creator sourcing and footage | Juan David Rojas | Intended final asset, usually VID | Actual approved channel, such as Cohley, Trybe, or Influencer - Other | Materials Needed in both Status and UGC Status. Verify the task appears in UGC Manager. |
+| Creator sourcing and footage | Juan David Rojas | Intended final asset, usually VID | Actual approved channel, such as Cohley, Trybe, or Influencer - Other | Materials Needed in the main Status field. Leave UGC Status as-is and verify the task appears in UGC Manager. |
 | Video editing | Andrea Suegart or Richard | VID | IH-Edit | Ready for Editing once the editing brief and required footage are available. |
 | Static or GIF design | Paola G or Mac Aira Macoy | IMG for statics, GIF for design GIFs | IH-Edit | Ready for Editing once the design brief and required assets are available. |
 
 1. Search by concept ID and production stage before creating a task. Keep creator sourcing and editing as separate, linked tasks. If a concept needs both video and static work, assign separate editing and design tasks.
 2. Split new video edits 50/50 between Andrea and Richard and new design work 50/50 between Paola and Mac, accounting for existing assignments. Preserve any explicit owner assignment.
-3. Set the title and concept ID, Division (Mens or Womens), Product, Category, Awareness, Asset Type, Source, Editor, and Creative Strategist. Add the Google Doc in the task update and File Link where writable. Verify Commenter access and put the testing-plan card on tab 2 of the brief. Leave Priority alone and use confirmed due dates.
+3. Fill and verify the assignment fields below. Keep the brief and the task aligned.
 4. Read back the saved task, assignee, status, fields, brief link, and intended view. Use the [detailed field matrix and recovery rules](PROCESS.md#8-monday-prepare-write-verify-recover) for missing fields or failed writes.
+
+| Monday field | What to fill in |
+| --- | --- |
+| Name | Concept ID, product, brief title, and production stage where needed. |
+| Status | Use the main Status in the assignment table above. |
+| Editor | Set the designated single owner, including Juan for sourcing and the assigned designer for static work. |
+| Creative Strategist | Brandon Wasoski. |
+| Division | Mens or Womens, matching the product and brief. |
+| Product | Exact approved product dropdown value. |
+| Category | Board category for that product. |
+| Awareness | Match the plan: Unawr, ProbAwr, SolAwr, ProdAwr, or MostAwr. |
+| Asset Type | Match the intended deliverable: VID, IMG, or GIF for these routes. |
+| Source | IH-Edit for internal editing and design. For Juan, use the confirmed creator channel. |
+| Campaign and Landing Page | Use the approved board labels when the brief or launch plan specifies them. |
+| Due Date | Set the confirmed production due date when provided. Use UGC Due for a confirmed creator delivery date. |
+| File Link and task update | Put the Google Doc in the task update and in File Link where writable. Verify Commenter access and put the plan card on tab 2. |
+| Raw Files | Link the actual product assets or footage when available. |
+| Priority and UGC Status | Preserve existing values during assignment. |
 
 ### Weekly handoffs and delivery checks
 
