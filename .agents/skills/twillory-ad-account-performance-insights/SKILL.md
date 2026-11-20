@@ -26,7 +26,7 @@ Pull spend, Meta-attributed purchase revenue, purchases, ROAS and purchase CPA. 
 
 ### Hard metrics and decision priority
 
-- **Company growth:** Target **+15% year over year in new customers**. Use Twillory's approved Google Sheet for verified new-customer counts. Compare equivalent current and prior-year periods with the same coverage and customer definition. Show both counts, the YoY change, comparison dates, source and as-of date. Calculate YoY growth as (current count − prior-year count) ÷ prior-year count when the prior-year count is positive. Use verified new-customer revenue alongside the count when available.
+- **Company growth (reporting dashboard):** Target **+15% year over year in new customers**. Use Twillory's approved Google Sheet for verified new-customer counts. Compare equivalent current and prior-year periods with the same coverage and customer definition. Show both counts, the YoY change, comparison dates, source and as-of date. Calculate YoY growth as (current count − prior-year count) ÷ prior-year count when the prior-year count is positive. Use verified new-customer revenue alongside the count when available.
 - **Campaign sales efficiency:** ROAS remains the primary Meta performance KPI. Read it with spend, purchase count, revenue and CPA before recommending scale. Use each campaign's own historical purchase CPA baseline by product and funnel lane. Calculate the historical baseline from comparable campaign periods as total spend divided by attributed purchases. Record the baseline dates, attribution, spend, purchases and any promo or seasonality differences. Establish and label a campaign-specific CPA target from that history. Mark thin or noncomparable history as provisional and avoid assigning a universal CPA threshold. Label purchase CPA separately from verified new-customer CAC.
 
 ### Soft metrics for diagnosis
@@ -47,7 +47,8 @@ Record each source metric's definition, denominator and scope. Use comparable de
 
 ### Dashboard handoff
 
-For an authorized dashboard with the right audience, connect only the verified Google Sheet tab and aggregate fields needed for new-customer counts and YoY growth. Show the current period, matched prior-year period, change, **+15% target** and last verified refresh. Keep this company-wide series distinct from Meta-attributed purchases and ad-level results. When the sheet mapping or access is unresolved, label the data unavailable. Keep live company figures and Sheet access details in approved reporting destinations.
+- **Reporting dashboard:** Use Twillory’s verified Google Sheet to show weekly New Customers counts, matched year-over-year comparisons, and progress toward the **+15% YoY goal**. Include the comparison dates and last verified refresh.
+- **Ad Account Performance Insights:** Use Meta or Hey Parker data to assess campaign and creative performance and recommend what to scale, iterate, or test next.
 
 Use ROAS as the primary metric for sales campaigns. Check spend, purchase volume, CPA and delivery history before calling a result. Prioritize eligible tests that meet the acquisition target at meaningful spend and volume when recommending creatives for product scaling. Treat low-spend, low-purchase or early results as directional.
 
