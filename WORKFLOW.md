@@ -26,6 +26,7 @@ Follow the [Twillory performance workflow](.agents/skills/twillory-ad-account-pe
 
 ## 3. Weekly testing plan
 
+- Deliver each men’s and women’s testing plan as an HTML document with clearly visible Foreplay thumbnails on the relevant concept cards.
 - Reconcile the current men’s and women’s plans and existing briefs, Monday tasks and launched ads before commissioning work. Distinguish net-new concepts, iterations and carry-forward decisions. Fresh evidence can change the priority of an existing concept without requiring another brief.
 - Allocate test slots by SKU and actual acquisition spend, with reasons for strategic exceptions. Review product, persona and awareness-stage coverage across the slate. Mark gaps and provisional personas. Use the five awareness stages specified in [the plan-card contract](PROCESS.md#4-weekly-testing-plan-men-and-women).
 - Give each concept a stable ID, plan revision, exact product, audience, awareness stage, fresh scan evidence IDs, performance rationale, hypothesis, source ad for iterations, what to hold and change, owner route, format and decision criteria. Record three distinct hook treatments and the expected deliverables. Keep proposals provisional when the evidence required for briefing is missing.
@@ -34,7 +35,7 @@ Follow the [Twillory performance workflow](.agents/skills/twillory-ad-account-pe
 
 - Inspect actual reference media in Foreplay. Capture the canonical Foreplay URL, the opening, hook, format, pacing, story, proof and CTA. Record the extent of the review and the evidence for any performance claim.
 - Explain how each reference execution applies to the Twillory product and customer objection. Consider creator face-to-camera, podcast, mockumentary, green screen, drama and longer narrative when the idea fits. Include statics and GIFs where they can demonstrate the idea.
-- Add the visual adaptation and source links to the plan card. Update its revision when the concept changes. Brief from the current selected revision and avoid reopening rejected duplicates. See [concepting requirements](PROCESS.md#5-concepting-and-visual-formatting).
+- Add the visual adaptation to the HTML plan card. Embed a clearly visible thumbnail for each selected Foreplay reference next to the concept, and link each thumbnail to its public Foreplay share URL. Update its revision when the concept changes. Brief from the current selected revision and avoid reopening rejected duplicates. See [concepting requirements](PROCESS.md#5-concepting-and-visual-formatting).
 
 ## 5. Briefing and scripting
 
@@ -42,6 +43,7 @@ Follow the [Twillory performance workflow](.agents/skills/twillory-ad-account-pe
 - Verify exact SKU, offer, destination, claim and source assets. Align copy, script, shot list and storyboard after any revision. A carousel brief should show the order, visual and exact copy for each card when a storyboard is requested.
 - Write separate sourcing, editing and design directions. Where an approved creator brief calls for natural delivery, supply benefit or feature talking points, must-capture shots and reference examples, with room for the creator’s own words. Use exact script and on-screen copy where the selected execution requires them.
 - Default to H1/H2/H3 with the shared body or control specified. Request three complete video edits, three distinct static masters or three GIF variants as applicable. Cover all required hook footage in the creator brief. Follow the [hook and variant contract](PROCESS.md#6a-minimum-three-hooks-per-concept) for full requirements.
+- Include the relevant reference videos and photos in the brief using public Foreplay share links. Verify that each link opens the intended media without a Foreplay login.
 - Use Google Docs with the plan card on tab 2. Verify the intended Commenter link access, source references and readiness before sending work to production.
 
 ## 6. Production routing and QA
