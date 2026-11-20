@@ -2,7 +2,7 @@
 
 ## Required entry points
 
-Read [PROCESS.md](PROCESS.md) and [PROJECT_STATUS.md](PROJECT_STATUS.md) before starting work. PROCESS.md is the full Twillory workflow, canonical skill registry and Monday execution contract. These instructions bind all work in this repository.
+Start with [WORKFLOW.md](WORKFLOW.md). Read the relevant contract in [PROCESS.md](PROCESS.md), the latest [PROJECT_STATUS.md](PROJECT_STATUS.md), and the current source artifact or live task for the requested stage. PROCESS.md contains the canonical skill registry and Monday execution contract. Use repo rules and verified current sources to ground work across sessions. Apply the latest explicit user correction to its stated scope.
 
 ## Critical rules
 
