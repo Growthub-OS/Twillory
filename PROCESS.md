@@ -93,6 +93,8 @@ Acceptance: source and dates are visible, metrics reconcile within their stated 
 
 ## 4. Weekly testing plan: men and women
 
+Deliver each men’s and women’s weekly testing plan as an HTML document. Embed clearly visible thumbnails from Foreplay on each concept card once its references are selected, with each thumbnail linking to its public Foreplay share URL. Verify the thumbnails render in the delivered HTML.
+
 The plan combines fresh conversation evidence and performance learning. Separate an initial proposed plan from the revised plan used for briefing.
 
 Each concept card must contain:
@@ -109,6 +111,7 @@ Each concept card must contain:
 | Change | Exact variable or creative approach being changed |
 | Hypothesis | Why the proposed change should improve response |
 | Execution | Video, static or GIF; visual format; reference; creator/internal route |
+| Foreplay references | Visible thumbnail for each selected video or photo reference, linked to its public Foreplay share URL |
 | Decision | What result supports continuing, iterating or stopping; use agreed thresholds and viable spend |
 | Tracking | Plan revision, brief link, Monday task link and separate stage status |
 
@@ -140,7 +143,7 @@ Use Growthub Sales Psychology for persuasion and Growthub Production Brief for p
 - Keep creator footage sourcing and editing handoffs separate. Different product edits can share a sourcing brief only when the footage requirements cover both; each edit still has its own clear brief.
 - Preserve the full-script/scene-table match, storyboard and QA requirements from the upstream brief where applicable. A scene change invalidates dependent storyboard content.
 - Use Google Docs for collaboration. Put the relevant plan card on the second tab. Set Anyone with the link - Commenter and verify the actual sharing state.
-- Include source references and verified assets. No invented offers, claims, prices, links or specifications.
+- Include the relevant reference videos and photos in the brief using public Foreplay share links. Verify that each link opens the intended media without a Foreplay login. Include verified product and production assets as applicable. No invented offers, claims, prices, links or specifications.
 - The document must be complete and checked before its Monday handoff is called ready.
 
 Acceptance: final script, execution instructions, assets, format, plan card and sharing work together. Brief completed is separate from task created, footage received or ad produced.
