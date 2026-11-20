@@ -113,3 +113,7 @@ Added the [stage-by-stage creative workflow](WORKFLOW.md) from Conversation Scan
 ## Conversation Scan source coverage, November 20, 2026
 
 Expanded the [required source list](PROCESS.md#required-source-coverage) and [workflow summary](WORKFLOW.md#1-conversation-scan) to document open-web category research, independent style blogs, Facebook Groups, video and comment coverage, Twillory ad comments, and competitor reviews. Documented how to date and label evidence and record access gaps.
+
+## Ad account KPI framework, November 20, 2026
+
+Updated the [Ad Account Performance Insights skill](.agents/skills/twillory-ad-account-performance-insights/SKILL.md) with diagnostic benchmarks, campaign-specific CPA baselines and the company new-customer growth target. The Google Sheet metric mapping and dashboard destination require verification before connection.
