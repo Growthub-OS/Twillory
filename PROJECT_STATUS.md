@@ -105,3 +105,7 @@ Remaining core work: men's briefing/scripts, remaining women's briefing/scripts,
 ## Ad Account Performance Insights documentation, November 20, 2026
 
 Documented the [Twillory workflow](.agents/skills/twillory-ad-account-performance-insights/SKILL.md) and linked it from the playbook. The guide covers reporting windows, ROAS targets, ad-level evidence, scaling recommendations and spend-weighted testing allocation.
+
+## Creative workflow documentation, November 20, 2026
+
+Added the [stage-by-stage creative workflow](WORKFLOW.md) from Conversation Scan through launch and learning, including the handoff and verification checks for each stage. Linked it from README.md and made it the starting point in AGENTS.md. Launch routing and task status continue to require live verification. Zach’s exact deliverable and handoff timing remain open.
