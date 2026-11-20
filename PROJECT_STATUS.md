@@ -117,3 +117,7 @@ Expanded the [required source list](PROCESS.md#required-source-coverage) and [wo
 ## Ad account KPI framework, November 20, 2026
 
 Updated the [Ad Account Performance Insights skill](.agents/skills/twillory-ad-account-performance-insights/SKILL.md) with diagnostic benchmarks, campaign-specific CPA baselines and the company new-customer growth target. The Google Sheet metric mapping and dashboard destination require verification before connection.
+
+## Foreplay reference and testing-plan formats, November 20, 2026
+
+Updated [the workflow](WORKFLOW.md#3-weekly-testing-plan) and [the plan-card contract](PROCESS.md#4-weekly-testing-plan-men-and-women) to require HTML testing plans, visible Foreplay thumbnails on concept cards, and public Foreplay video and photo links in briefs.
