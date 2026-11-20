@@ -17,7 +17,7 @@ Start with [WORKFLOW.md](WORKFLOW.md). Read the relevant contract in [PROCESS.md
 - Deliver 4 new men's creator briefs and 2 new women's creator briefs to Juan weekly. Preserve the 1-2 items/week requirement for Zach; exact deliverable type and handoff time remain unresolved.
 - Creator sourcing and editing have separate handoffs. Required footage must be available before marking an edit ready.
 - Use the current board schema and actual person identities. Never guess columns, labels, product associations or assignees.
-- UGC Manager is a filtered view, not a group. Main Status = Materials Needed alone does not establish visibility. See the verified view rules in PROCESS.md.
+- Set Juan’s main Status to Materials Needed at sourcing handoff and preserve UGC Status. Verify the task in the UGC Manager view. If it is missing, record the visibility gap and inspect the view rules in PROCESS.md.
 - Check existing tasks before creation. Preserve Juan's originals. On a timeout, search and resume the existing item before retrying creation.
 - Use VID, IMG or GIF according to live labels; source IH-Edit applies to internal production, not creator sourcing. Use Mens or Womens correctly.
 - Set Brandon Wasoski as Creative Strategist. Balance editor/designer assignments across the actual current roster. Leave Priority untouched.
