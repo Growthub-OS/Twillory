@@ -48,8 +48,23 @@ Follow the [Twillory performance workflow](.agents/skills/twillory-ad-account-pe
 
 ## 6. Production routing and QA
 
-- Check the live Creative Production board for an existing matching concept and stage. Follow the [role matrix and read-back procedure](PROCESS.md#8-monday-prepare-write-verify-recover) for each handoff. Assign Juan to sourcing, Andrea or Richard to editing, Paola or Mac to design, and Brandon as Creative Strategist. Balance new assignments across the appropriate pool and preserve explicit assignments.
-- Verify Juan’s sourcing task in the UGC Manager view with the correct status and source. Internal tasks use the approved source and reach Ready for Editing once the brief and required assets or footage are ready. Create separate tasks when video and static versions need different owners. Verify the actual product, division, category, awareness, asset type, owner, stage and brief link. Leave Priority alone.
+### Monday assignment guide
+
+Use the [Twillory Creative Production board](https://twillory-company.monday.com/boards/18410060478). Set the production assignee in **Editor** for every route and set **Creative Strategist** to **Brandon Wasoski**.
+
+| Work | Who goes in Editor | Asset Type | Source | Status at handoff |
+| --- | --- | --- | --- | --- |
+| Creator sourcing and footage | Juan David Rojas | Intended final asset, usually VID | Actual approved channel, such as Cohley, Trybe, or Influencer - Other | Materials Needed in both Status and UGC Status. Verify the task appears in UGC Manager. |
+| Video editing | Andrea Suegart or Richard | VID | IH-Edit | Ready for Editing once the editing brief and required footage are available. |
+| Static or GIF design | Paola G or Mac Aira Macoy | IMG for statics, GIF for design GIFs | IH-Edit | Ready for Editing once the design brief and required assets are available. |
+
+1. Search by concept ID and production stage before creating a task. Keep creator sourcing and editing as separate, linked tasks. If a concept needs both video and static work, assign separate editing and design tasks.
+2. Split new video edits 50/50 between Andrea and Richard and new design work 50/50 between Paola and Mac, accounting for existing assignments. Preserve any explicit owner assignment.
+3. Set the title and concept ID, Division (Mens or Womens), Product, Category, Awareness, Asset Type, Source, Editor, and Creative Strategist. Add the Google Doc in the task update and File Link where writable. Verify Commenter access and put the testing-plan card on tab 2 of the brief. Leave Priority alone and use confirmed due dates.
+4. Read back the saved task, assignee, status, fields, brief link, and intended view. Use the [detailed field matrix and recovery rules](PROCESS.md#8-monday-prepare-write-verify-recover) for missing fields or failed writes.
+
+### Weekly handoffs and delivery checks
+
 - Track four men’s and two women’s creator briefs to Juan per week and the existing one-to-two-item expectation for Zach. Keep Zach’s exact handoff details unresolved until confirmed. Count completed handoffs by concept and finished outputs by variant.
 - Check each final export against the brief for product, claim, offer, footage, copy, dimensions, variant and working destination. Link the final files and record any missing variants or approval. If a task write fails, recover the same item, verify persisted fields and report the exact remaining gap.
 
