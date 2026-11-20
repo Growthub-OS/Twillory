@@ -27,35 +27,40 @@ Keep general methods upstream. Put Twillory-specific configuration, templates, s
 
 Default to the rolling last 7 days at run time. Extend to 10 days if needed for coverage, explicitly recording the extension. State the exact date/time boundaries and timezone. Do not use an older scan as the current scan just because it is the latest saved file.
 
-Every finding that informs the weekly creative plan must come from a consumer comment, review or conversation published within that window.
+Every finding that informs the weekly creative plan must come from a firsthand consumer comment, review or account published within that window.
 
 ### Required source coverage
 
-Attempt each source family and report what was actually accessible:
+Search the open web for category, product, fit, fabric, occasion and competitor conversations, including searches that omit the Twillory name. Attempt each source family and report the coverage actually reached:
 
-- Twillory and competitor Facebook ad comments.
-- Twillory and competitor Instagram ad comments.
-- Reddit threads and individual comments.
-- TikTok comments and discussions.
-- YouTube videos, discussions and comments.
-- Quora questions and answers.
-- Twillory's own website reviews.
-- Third-party review sites and retailer reviews.
-- Competitor product and brand reviews.
-- X / Twitter posts, replies and discussions.
-- Relevant forums and other category communities.
+| Source family | What to inspect |
+| --- | --- |
+| Reddit | Relevant subreddits, threads and individual replies |
+| Quora | Questions, answers and discussion where visible |
+| Independent reviews | Third-party review sites and retailer product reviews |
+| Twillory reviews | Reviews on Twillory's own site |
+| Competitor reviews | Competitors' product and brand reviews on their own sites, retailers and independent review sites |
+| Men's fashion and suiting blogs | Independent style articles and reader discussion on fit, fabrics, outfits and buying decisions |
+| Facebook Groups | Relevant men's fashion, suiting and occasion groups, including posts and replies where authorized access exists |
+| TikTok videos | Relevant videos with firsthand product or category experience, plus public creator context |
+| TikTok comments | Comment sections and replies on relevant videos |
+| YouTube videos | Relevant reviews, try-ons, guides and firsthand accounts |
+| YouTube comments | Comment sections and replies on relevant videos |
+| Twillory ad comments | Facebook and Instagram comment threads and replies on Twillory ads |
+| Competitor ad comments | Facebook and Instagram ad discussions where accessible |
+| Other communities | X / Twitter, other social threads, category forums and relevant communities found through open-web search |
 
-Use approved connected tools first; use public search or authenticated browser access when needed and authorized. Search the whole relevant category, products and competitors, not only mentions of Twillory.
+Use approved connected tools, public search and authorized browsing. Check video coverage and comment coverage separately. Inspect the relevant source material directly, using video playback or available transcript as appropriate, and record what was reviewed. For blogs, creator videos and competitor marketing, label editorial and promotional material as context. Use identifiable firsthand consumer comments, reviews or accounts as evidence when they meet the date and sourcing requirements.
 
-A required coverage attempt is not a claim of complete platform access. Log each family as scanned, no qualifying fresh evidence, inaccessible, or not available. Name any missing access precisely. Never claim to have scanned every comment or every platform if access or pagination was incomplete.
+Log each family as scanned, no qualifying fresh evidence, inaccessible or not available. Record incomplete pagination, missing comments, private or restricted access, and material that could only be read in part. Continue the scan across the other sources when an individual source is unavailable.
 
 ### Evidence rules
 
-- Verify the actual publication date of the individual comment or review. A crawl date, updated page date, search recency filter or thread creation date is insufficient by itself.
+- Verify the original publication date of the individual item used as evidence. A video upload date can date its content. Date comments and replies individually. A crawl date, page update, search filter or thread creation date alone cannot establish a reply date.
 - A fresh reply on an older thread can qualify; the older root post is context only.
 - An undated or older item cannot support a fresh finding. Keep it out of the findings and consumer-language bank.
 - Older brand facts, product references and past scans may be read for context and deduplication; do not count them as fresh research.
-- Open full threads, reviews and comment sections. Search snippets alone do not establish a finding.
+- Open full threads, articles, reviews and comment sections, and inspect the relevant video or transcript. Search snippets alone do not establish a finding.
 - Preserve URL/permalink, platform, comment/review date, capture date, product, audience evidence, quote or labeled paraphrase, theme and objection. Never put a paraphrase in quotation marks.
 - Deduplicate cross-posts and repeated comments. Separate consumers from brand replies, promotional copy and spam.
 - Mark repeated historical themes as recurring; do not label them newly discovered without a fresh reason.
