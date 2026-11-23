@@ -129,3 +129,10 @@ Added the [Monday assignment guide](WORKFLOW.md#monday-assignment-guide) for cre
 ## Monday assignment field checklist, November 20, 2026
 
 Updated the [assignment guide](WORKFLOW.md#monday-assignment-guide), [board field matrix](PROCESS.md#8-monday-prepare-write-verify-recover), and agent instructions. Juan’s sourcing handoff sets main Status to Materials Needed and preserves UGC Status. The guide now lists the fields to fill, including Campaign, Landing Page, Due Date and UGC Due when confirmed, and the separate UGC Manager visibility check.
+
+
+## Ad Account Performance Insights dashboard, November 22, 2026
+
+Published the owner-only dashboard update with Hey Parker snapshots for Today and Yesterday, custom ranges up to 31 synced days, manual reload with freshness labels, campaign and strategist breakdowns, multi-select ad-set filters and Creative Testing ACQ hit rate. Documented the controls, reporting dates, refresh schedule, coverage and scoring rules in the [performance guide](.agents/skills/twillory-ad-account-performance-insights/SKILL.md#5-use-the-ad-account-performance-insights-dashboard).
+
+Verified campaign placement coverage and daily reconciliation for November 1–22 Pacific Time. Matched the November 1–15 backfill to Hey Parker and checked campaign and ad-set filtering and strategist hit-rate calculation. November 22 was partial at the time of verification.
