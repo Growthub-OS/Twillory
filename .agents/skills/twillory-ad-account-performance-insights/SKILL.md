@@ -67,3 +67,31 @@ For each decision-driving ad, show its exact ad name, thumbnail and source creat
 Title the readout **Ad Account Performance Insights** and follow the current approved Twillory report format when available. Include lane-level performance, daily spend versus revenue, acquisition spend by product, selected ads and the actions for the testing plan. Verify that date windows, attribution, coverage and source links are visible, and that each action traces to a real ad or product. Keep live account data and creative assets in their approved reporting destinations. This is a read-only analysis workflow.
 
 Use the [Meta Ads Creative Report](https://github.com/Growthub-OS/gh-client-agent-skills-library/blob/main/.agents/skills/meta-ads-creative-report/SKILL.md) when building the interactive dashboard for exploring the underlying data.
+
+
+## 5. Use the Ad Account Performance Insights dashboard
+
+The owner-only dashboard uses synced Hey Parker data for Twillory's Meta ad account. The refresh is scheduled for 3 a.m., 9 a.m., 3 p.m. and 9 p.m. Eastern. Reporting dates follow the account's Pacific Time.
+
+| Control | What it shows |
+| --- | --- |
+| Today and Yesterday | The latest synced snapshot for each Pacific reporting day. Today is partial. Yesterday can change as Hey Parker sync and Meta attribution catch up. |
+| Custom range | Up to 31 inclusive synced dates. The dashboard identifies missing dates. |
+| Check for updates | Reloads the latest saved snapshot. The header shows the last Hey Parker pull or the oldest pull across a multi-day range. |
+| Archive | The earlier creative sample, with 5-, 7- and 14-day presets and a custom date selector within archive coverage. |
+
+### Breakdowns and creative review
+
+- **Campaign split** groups Acquisition (including Creative Testing ACQ), Remarketing and Retention, with separate rows for other or unallocated activity when present. **Creative strategist** uses the strategist tag or legacy slot in the ad name and groups unmatched or ambiguous names under Untagged / other.
+- Both tables show spend, Meta-attributed revenue, purchases, purchase CPA and ROAS. Select a row to filter the report. Drill down by campaign, ad set and ad name. The ad-set picker follows the selected campaigns and supports multiple ad sets.
+- Review daily spend versus revenue and use the Cards, Report and Tags views to inspect creatives. Thumbnail, AI analysis and comment coverage varies by ad. The minimum-spend control filters the creative list.
+- The dashboard displays Twillory's performance benchmarks. The Archive campaign report shows prior CPA and CPA change when comparable periods are available. Hook rate, hold rate and outbound CTR are available in the Archive. Frequency and first-time impression ratio have benchmark entries and are currently unavailable in the dashboard data.
+- Revenue and purchase counts use Meta attribution through Hey Parker. Use the approved Google Sheet for verified new-customer counts and progress toward the +15% YoY goal.
+
+### Creative strategist hit rate
+
+**View last 7 days** loads seven Pacific dates including today. The calculation uses completed dates within the selected synced window and respects campaign and ad-set filters.
+
+- Count each ad name with spend in Creative Testing ACQ once. An eligible test spent at least **$100** across at least **five completed Pacific reporting days with spend** in the selected window.
+- A hit is an eligible test with **ROAS of 2.00× or higher**. Hit rate is hits divided by eligible tests. The table shows tests with spend, eligible tests, hits and hit rate. A dash marks zero eligible tests.
+- The table requires campaign detail for every completed date in the selected range. It displays a coverage message if any completed date lacks that detail.
