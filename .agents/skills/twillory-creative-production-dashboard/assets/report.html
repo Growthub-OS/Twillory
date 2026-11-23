@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Twillory | Weekly Creative Production</title>
+<style>__REPORT_CSS__</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="mast"><span class="brand" aria-label="Twillory">TWILLORY</span><a id="board-link" rel="noopener" target="_blank">Open Monday board</a></div>
+<div class="hero"><div><h1>Creative Production</h1>
+<p class="period" id="period"></p></div><div class="source-card"><p class="source-title">Monday data</p><p class="asof" id="asof"></p><div class="live-tools" id="live-tools" hidden><button type="button" id="refresh">Refresh Monday data</button><span id="live-state" role="status"></span><a id="connect" target="_top" hidden>Connect Monday</a></div></div></div>
+</div></header>
+<section id="empty-state" class="empty-state wrap" hidden><h2>Waiting for Monday data</h2><p id="empty-message">Loading the Creative Production board.</p></section>
+<main class="wrap">
+<section class="filters" aria-label="Report filters">
+<div class="filter-row">
+<label>Reporting week<select id="week"></select></label><label>From (ET)<input type="date" id="from"></label><label>Through (ET)<input type="date" id="to"></label>
+<label>Division<select id="division"></select></label><label>Find a creative<input id="search" type="search" placeholder="Name, task ID or product"></label>
+<button type="button" id="reset">Reset filters</button>
+</div>
+<details class="more-filters" id="more-filters"><summary>More filters</summary><div class="more-fields">
+<label>Format<select id="format"></select></label><label>Campaign group<select id="season"></select></label>
+<label>Awareness<select id="awareness"></select></label><label>Persona<select id="persona"></select></label>
+<label>Production owner<select id="editor"></select></label><label>Creative strategist<select id="strategist"></select></label><label>Product category<select id="category"></select></label></div></details>
+</section>
+<p id="selection" class="source-state muted" aria-live="polite"></p>
+<section id="metrics" class="metrics" aria-label="Milestones"></section>
+<div class="views" id="views" aria-label="Additional production views"></div>
+<div class="operations-grid">
+<section class="panel" aria-labelledby="pipeline-title"><h2 id="pipeline-title">Production pipeline</h2><p class="muted" id="pipeline-note"></p><div class="stage-grid" id="pipeline"></div></section>
+<section class="panel" aria-labelledby="handoff-title"><h2 id="handoff-title">Creator briefs handed off</h2><p class="muted" id="handoff-range"></p><div id="handoffs"></div><p class="muted" id="handoff-note"></p></section>
+</div>
+<div class="analysis-grid"><section class="trend"><h2>Weekly activity</h2><p class="muted" id="trend-label"></p><div class="week-trend" id="trend"></div></section><section class="summary" aria-labelledby="summary-title"><h2 id="summary-title">Selected period at a glance</h2><ul id="summary"></ul></section></div>
+<section class="grids" aria-label="Creative breakdown">
+<section class="panel"><h2>Format mix</h2><div id="format-bars" class="bars"></div></section>
+<section class="panel"><h2>Awareness stages</h2><div id="awareness-bars" class="bars"></div></section>
+<section class="panel"><h2>Production owners</h2><div id="editor-bars" class="bars"></div></section>
+<section class="panel persona-panel"><h2>Target personas</h2><p class="muted" id="persona-note"></p><div id="persona-groups" class="persona-groups"></div></section>
+<section class="panel"><h2>Black Friday &amp; Cyber Monday</h2><div id="season-bars" class="bars"></div><p class="muted">Combined BFCM items are counted once. The report retains the original Monday campaign on each item.</p></section>
+<section class="panel"><h2>Division</h2><div id="division-bars" class="bars"></div></section>
+<section class="panel"><h2>Creative strategists</h2><div id="strategist-bars" class="bars"></div></section>
+<section class="panel"><h2>Product categories</h2><div id="category-bars" class="bars"></div></section>
+</section>
+<section class="tablepanel" aria-labelledby="table-title">
+<div class="tablehead"><div><h2 id="table-title"></h2><p id="table-note" class="muted"></p></div></div>
+<div class="tablebox"><table><thead><tr><th>Creative / product</th><th>Division / format</th><th>Campaign</th><th>Awareness / persona</th><th id="date-column">Milestone</th><th>Status / owner</th><th>Creative strategist</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="pager"><button type="button" id="prev-page">Previous</button><span id="pagination"></span><button type="button" id="next-page">Next</button></div>
+</section>
+<details class="method"><summary>How the report is counted</summary>
+<ul>
+<li><strong>Counting unit.</strong> One Monday parent item per milestone in the selected dates. A single task can contain several masters, hooks, variants, or placements. The report uses parent work packages for totals. Planned images are summed only where the title explicitly declares an image count.</li>
+<li><strong>Intake.</strong> Added uses the item creation timestamp. Briefed uses <em>Brief Date</em>, with a transition to <em>Brief Ready</em> as fallback when the date is blank. Queued uses entry into <em>Ready for Editing</em> or <em>Queued for Editing</em> from outside those two statuses. Returns from Editing or a later production stage appear under Returned to queue.</li>
+<li><strong>Production.</strong> Editing started uses entry into <em>Editing</em>, including resumed work. Edits delivered uses <em>Delivery Date</em> or entry into <em>In Review</em>. Approved uses entry into <em>Approved</em>. Each creative can count at multiple milestones.</li>
+<li><strong>Launch.</strong> Launched uses <em>Launched Actual Date</em> first and a transition to <em>Launched</em> when the date is blank. The count reflects Monday’s launch records.</li>
+<li><strong>Open work.</strong> Production pipeline shows each active item’s current Monday status, including creator work, review, approval and upload. The pipeline reflects the snapshot date. Use the Launched milestone for launches within the selected dates.</li>
+<li><strong>Classification.</strong> IMG = Static; VID and VSL = Video; GIF, carousel and catalog have their own categories. Explicit creator sourcing/filming tasks and brief rows have a dedicated view. Untyped rows are available under Unclassified intake. Blank awareness is Unclassified. Target personas come from the matched creative brief or its testing-plan tab. Persona groups use the ad’s product division. Counts distinguish personas named in briefs from those inferred from product-specific copy. A shopper can buy for another person. The creative details show the source and note any explicitly named secondary target. Seasonal grouping uses the Campaign field and explicit titles when Campaign is blank or Evergreen.</li>
+<li><strong>Source coverage.</strong> Milestone timestamps use Eastern Time. Format, tags, owners, due dates, and displayed statuses are board values at the snapshot. Active backlog uses that same snapshot for any date selection.</li>
+</ul><p class="muted" id="coverage"></p></details>
+</main>
+<dialog id="detail"><button class="close" id="close" type="button">Close</button><h2 id="detail-title"></h2><div id="detail-body"></div></dialog>
+<script type="application/json" id="report-data">__REPORT_DATA__</script>
+<script>
+"use strict";
+let data=JSON.parse(document.getElementById("report-data").textContent);
+const $=id=>document.getElementById(id);
+const esc=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
+const external=url=>/^https:\/\//i.test(url??"")?esc(url):"#";
+const number=new Intl.NumberFormat("en-US");
+const shortDate=new Intl.DateTimeFormat("en-US",{month:"short",day:"numeric",timeZone:"UTC"});
+const stamp=new Intl.DateTimeFormat("en-US",{month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"America/New_York"});
+const dateLabel=d=>d?shortDate.format(new Date(d+"T00:00:00Z")):"—";
+const rangeLabel=(s,e)=>s===e?dateLabel(s):dateLabel(s)+" – "+dateLabel(e);
+const stages={added:"Added to Monday",briefed:"Briefed",queued:"Entered queue",editing:"Editing started",delivered:"Edits delivered",approved:"Approved",launched:"Launched",requeued:"Returned to queue",sourced:"UGC materials needed",creator:"Creator sourcing intake",unclassified:"Unclassified intake"};
+const pipelineStages=["Ideas","Concept","Brief Needed","Brief In Progress","Brief Ready","Brief Revisions","Materials Needed","UGC In Progress","UGC In Review","UGC Revisions Needed","Ready for Editing","Queued for Editing","Editing","In Review","Revisions Needed","Approved for Katelyn","Approved for Upload","Approved","Stuck","On Hold","Unclassified"];
+const launchReady=new Set(["Approved for Katelyn","Approved for Upload","Approved"]);
+const formats=["Static","Video","GIF","Carousel","Catalog"];
+const aware=["Unaware","Problem aware","Solution aware","Product aware","Most aware","Other","Unclassified"];
+const seasons=["Black Friday","Cyber Monday","BFCM combined","Other campaigns"];
+const divisions=["Men","Women","All divisions","Unclassified"];
+const filterFields=["division","format","season","awareness","persona","editor","strategist","category"];
+const normalizeRows=report=>report.rows.map(i=>({...i,season:i.season||"Other campaigns",persona:i.persona||"Unmapped",personaStatus:i.personaStatus||(i.persona?"Mapped from brief":"Brief not reviewed"),editor:i.editor||"Unassigned",strategist:i.strategist||"Unassigned",category:i.category||"Uncategorized"}));
+let rows=normalizeRows(data);
+const hasEvent=(i,k,s,e)=>(i.ev[k]||[]).some(([d])=>d>=s&&d<=e);
+const qualifies=(i,k,s,e)=>{
+  if(k==="pipeline")return i.active&&(pipelineStatus===""||i.status===pipelineStatus);
+  if(k==="creator")return i.format==="Creator sourcing"&&hasEvent(i,"added",s,e);
+  if(k==="unclassified")return i.format==="Unclassified"&&hasEvent(i,"added",s,e);
+  if(!formats.includes(i.format))return false;
+  return hasEvent(i,k,s,e);
+};
+const list=(k,s,e,source=rows)=>source.filter(i=>qualifies(i,k,s,e));
+const count=(arr,key,val)=>arr.filter(i=>i[key]===val).length;
+const tally=(arr,key)=>Object.entries(arr.reduce((out,i)=>(out[i[key]]=(out[i[key]]??0)+1,out),Object.create(null))).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0]));
+const inSeason=i=>i.season!=="Other campaigns";
+const formatText=i=>i.code?i.code+" · "+i.format:i.format;
+function populate(id,opts){$(id).innerHTML='<option value="">All</option>'+opts.map(n=>'<option>'+esc(n)+'</option>').join("");}
+function daysAfter(day, offset){
+  const date=new Date(day+"T00:00:00Z");
+  date.setUTCDate(date.getUTCDate()+offset);
+  return date.toISOString().slice(0,10);
+}
+function lastVisibleDay(){return data.max||data.end;}
+function getWeeks(){
+  const weeks=[];
+  for(let first=data.min;first<=lastVisibleDay();first=daysAfter(first,7)){
+    const last=daysAfter(first,6);
+    const cutoff=last>lastVisibleDay()?lastVisibleDay():last;
+    weeks.push({first,last,cutoff});
+  }
+  return weeks.reverse();
+}
+function reflectWeek(){
+  const s=$("from").value,e=$("to").value;
+  const match=getWeeks().find(w=>w.first===s&&w.cutoff===e);
+  $("week").value=match?match.first:s===data.min&&e===lastVisibleDay()?"all":"custom";
+}
+function configure(keep){
+  $("board-link").href=data.board;
+  $("asof").textContent="Monday data through "+stamp.format(new Date(data.asOf))+" ET";
+  $("coverage").textContent=number.format(data.boardCount)+" visible parent items checked. "+number.format(data.inspected)+" activity events inspected. "+data.unmatched+" item IDs had no visible matching parent row and were excluded."+(data.truncated?" "+data.truncated+" activity payloads were truncated.":"")+(data.activityMin&&data.activityMin>data.min?" Status history is available from "+dateLabel(data.activityMin)+". Earlier periods may omit status-only milestones.":"");
+  const combine=(id,opts)=>{const selected=$(id).value;populate(id,opts);if(keep&&opts.includes(selected))$(id).value=selected;};
+  combine("division",divisions);
+  combine("format",[...formats,"Creator sourcing","Unclassified"]);
+  combine("season",seasons);
+  combine("awareness",aware);
+  combine("persona",[...new Set(rows.map(i=>i.persona))].sort());
+  for(const field of ["editor","strategist","category"])combine(field,[...new Set(rows.map(i=>i[field]))].sort());
+  $("week").innerHTML='<option value="custom">Custom dates</option><option value="all">All available dates</option>'+getWeeks().map(w=>'<option value="'+w.first+'">'+esc(rangeLabel(w.first,w.last)+(w.last!==w.cutoff?" · through "+dateLabel(w.cutoff):""))+'</option>').join("");
+  for(const id of ["from","to"]){$(id).min=data.min;$(id).max=lastVisibleDay();}
+  if(!keep||!$("from").value||$("from").value<data.min)$("from").value=data.start;
+  if(!keep||!$("to").value||$("to").value>lastVisibleDay())$("to").value=data.end;
+  reflectWeek();
+}
+function periodSummary(s,e,filtered){
+const baseline=k=>list(k,s,e,filtered);
+const queue=baseline("queued"), launched=baseline("launched"), promotional=queue.filter(inSeason);
+const planned=promotional.reduce((a,i)=>a+i.planned,0), plannedPackages=promotional.filter(i=>i.planned).length;
+const explicit=queue.filter(i=>i.personaStatus==="Mapped from brief").length;
+const inferred=queue.filter(i=>i.personaStatus==="Inferred from brief").length;
+const summary=[
+  number.format(queue.length)+" work packages entered the queue. The mix was "+number.format(count(queue,"format","Static"))+" static, "+number.format(count(queue,"format","Video"))+" video, and "+number.format(queue.length-count(queue,"format","Static")-count(queue,"format","Video"))+" GIF, carousel, or catalog. "+number.format(baseline("creator").length)+" creator sourcing tasks were added.",
+  number.format(baseline("delivered").length)+" work packages reached edit delivery, "+number.format(baseline("approved").length)+" were approved, and "+number.format(launched.length)+" were marked launched in Monday. "+number.format(launched.filter(i=>i.created<s).length)+" launches came from items added before the selected dates.",
+  number.format(promotional.length)+" Black Friday / Cyber Monday work packages entered the queue. "+(planned?number.format(planned)+" planned images across "+plannedPackages+" packages have a quantity stated in the item title. ":"")+number.format(launched.filter(inSeason).length)+" seasonal packages were marked launched in Monday.",
+  number.format(count(queue,"awareness","Most aware"))+" queued packages were Most aware. "+explicit+" had personas named in briefs, "+inferred+" were inferred from brief copy, and "+(queue.length-explicit-inferred)+" remain unmapped."
+];
+$("summary").innerHTML=summary.map(line=>"<li>"+esc(line)+"</li>").join("");
+}
+let view="queued",page=0,pipelineStatus="";const pageSize=20;
+const button=(k,n,kind)=>'<button type="button" class="'+kind+'" data-view="'+k+'" aria-pressed="'+(view===k)+'">'+(kind==="metric"?'<b>'+number.format(n)+'</b><span>'+esc(stages[k])+'</span>':esc(stages[k])+' · '+number.format(n))+'</button>';
+function barChart(arr,field,labels){
+  const counts=labels?labels.map(l=>[l,count(arr,field,l)]):tally(arr,field);
+  if(field==="persona")counts.sort(([a],[b])=>Number(a==="Unmapped")-Number(b==="Unmapped"));
+  const max=Math.max(1,...counts.map(([,n])=>n));
+  return counts.length?counts.map(([label,n])=>'<button class="segment" type="button" data-field="'+field+'" data-value="'+esc(label)+'" style="--width:'+Math.round(100*n/max)+'%" aria-label="Filter '+esc(label)+', '+n+' items"><span>'+esc(label)+'</span><b>'+number.format(n)+'</b></button>').join(""):'<small>No matching items</small>';
+}
+function chooseWeek(key){
+  const chosen=getWeeks().find(w=>w.first===key);
+  if(key==="all"){$("from").value=data.min;$("to").value=lastVisibleDay();}
+  else if(chosen){$("from").value=chosen.first;$("to").value=chosen.cutoff;}
+  else {$("from").focus();return;}
+  reflectWeek();page=0;render();
+}
+function weeklyTrend(){
+  const weeks=getWeeks().slice(0,8).reverse();
+  const metric=view==="pipeline"?"queued":view;
+  const totals=weeks.map(w=>list(metric,w.first,w.cutoff).length);
+  const max=Math.max(1,...totals);
+  $("trend-label").textContent=stages[metric]+" · all creatives · "+(weeks.length>1?"select a week":"selected week");
+  $("trend").innerHTML=weeks.map((w,index)=>'<button type="button" class="week-point" data-week="'+w.first+'" aria-pressed="'+($("week").value===w.first)+'" aria-label="'+esc(rangeLabel(w.first,w.cutoff)+", "+totals[index]+" "+stages[metric].toLowerCase())+'"><i aria-hidden="true" style="--height:'+Math.max(2,Math.round(totals[index]*29/max))+'px"></i><b>'+totals[index]+'</b><span>'+esc(dateLabel(w.first))+'</span></button>').join("");
+}
+function operations(filtered,s,e,valid){
+  const active=filtered.filter(row=>row.active);
+  const statuses=new Map(tally(active,"status"));
+  const known=pipelineStages;
+  const extra=[...statuses.keys()].filter(stage=>!known.includes(stage));
+  const ordered=[...known,...extra];
+  const approvals=active.filter(row=>launchReady.has(row.status)).length;
+  $("pipeline-note").textContent=valid?active.length+" open items · "+approvals+" in approval or upload stages · current status across open work":"Select a valid date range.";
+  $("pipeline").innerHTML=ordered.map(stage=>'<button type="button" class="stage-chip" data-stage="'+esc(stage)+'" aria-pressed="'+(view==="pipeline"&&pipelineStatus===stage)+'"><b>'+(statuses.get(stage)||0)+'</b><span>'+esc(stage)+'</span></button>').join("")||'<p class="muted">No open items match the filters.</p>';
+  const handoffs=valid?(data.handoffs||[]).filter(brief=>brief.date>=s&&brief.date<=e):[];
+  $("handoff-range").textContent=valid?rangeLabel(s,e)+" · documented Monday handoffs":"Select a valid date range.";
+  const handoffList=entries=>entries.length?'<ul class="handoff-list">'+entries.map(brief=>'<li><a href="'+external(brief.url)+'" target="_blank" rel="noopener">'+esc(brief.name.split(" | ")[0])+'</a> <span title="'+esc(brief.evidence)+'">'+esc(dateLabel(brief.date))+'</span></li>').join("")+'</ul>':"";
+  $("handoffs").innerHTML=["Basya","Zach","Juan"].map(person=>{
+    const entries=handoffs.filter(brief=>brief.recipient===person).sort((a,b)=>b.date.localeCompare(a.date));
+    const heading='<div class="handoff-person"><h3>'+person+'</h3><strong>'+entries.length+'</strong></div>';
+    if(person!=="Juan")return heading+handoffList(entries);
+    const divisions=[["Men","Men’s Creator Briefs"],["Women","Women’s Creator Briefs"]];
+    if(entries.some(brief=>!["Men","Women"].includes(brief.division)))divisions.push(["Other","Other Creator Briefs"]);
+    return heading+divisions.map(([division,label])=>{
+      const group=entries.filter(brief=>division==="Other"?!["Men","Women"].includes(brief.division):brief.division===division);
+      return '<details class="handoff-division"><summary><span>'+label+'</span><strong>'+group.length+'</strong></summary>'+(handoffList(group)||'<p class="muted">No documented briefs in this period.</p>')+'</details>';
+    }).join("");
+  }).join("");
+  $("handoff-note").textContent=data.handoffWarning||"Counts reflect verified Monday handoffs. Drafts and off-board sends may be absent.";
+}
+function personaBreakdown(selected){
+  const named=selected.filter(row=>row.persona!=="Unmapped");
+  const inferred=named.filter(row=>row.personaStatus==="Inferred from brief").length;
+  const unmapped=selected.length-named.length;
+  $("persona-note").textContent=selected.length?(named.length-inferred)+" named in brief · "+inferred+" inferred from copy · "+unmapped+" unmapped":"No matching creative items.";
+  $("persona-groups").innerHTML=[["Men","Men’s personas"],["Women","Women’s personas"],["All divisions","Shared personas"],["Unclassified","Division unavailable"]].map(([division,title])=>{
+    const group=selected.filter(row=>row.division===division);
+    if(!group.length&&["All divisions","Unclassified"].includes(division))return "";
+    return '<div><h3>'+title+'</h3><div class="bars">'+barChart(group,"persona",null)+'</div></div>';
+  }).join("");
+}
+function detailDate(i,k,s,e){
+  const key=k==="creator"||k==="unclassified"?"added":k;
+  return (i.ev[key]||[]).filter(([d])=>d>=s&&d<=e).sort(([a],[b])=>a.localeCompare(b))[0]?.[0]||"";
+}
+function render(){
+  const s=$("from").value,e=$("to").value;const valid=s&&e&&s<=e&&s>=data.min&&e<=lastVisibleDay();
+  const search=$("search").value.trim().toLowerCase();
+  const filtered=valid?rows.filter(i=>filterFields.every(k=>!$(k).value||i[k]===$(k).value)&&(!search||[i.name,i.code,i.product,i.campaign].some(v=>v.toLowerCase().includes(search)))):[];
+  const selected=list(view,s,e,filtered);
+  operations(filtered,s,e,valid);
+  const viewTitle=view==="pipeline"?(pipelineStatus||"Open pipeline"):stages[view];
+  weeklyTrend();
+  const week=getWeeks().find(w=>w.first===s&&w.cutoff===e);
+  $("period").textContent=valid?(week&&week.last!==week.cutoff?rangeLabel(s,week.last)+" · through "+dateLabel(e):rangeLabel(s,e))+", "+e.slice(0,4)+" · Sunday–Saturday weeks":"Creative department";
+  $("summary-title").textContent=valid?rangeLabel(s,e)+" at a glance":"Selected period at a glance";
+  if(valid)periodSummary(s,e,filtered);
+  else $("summary").innerHTML="<li>Select a valid date range.</li>";
+  $("selection").textContent=valid?rangeLabel(s,e)+" · "+viewTitle+(view==="pipeline"?" · current status":""):"Choose a valid date range within the available snapshot.";
+  $("metrics").innerHTML=Object.keys(stages).slice(0,7).map(k=>button(k,list(k,s,e,filtered).length,"metric")).join("");
+  $("views").innerHTML=Object.keys(stages).slice(7).map(k=>button(k,list(k,s,e,filtered).length,"select-view")).join("");
+  for(const [key,labels] of [["format",view==="creator"?["Creator sourcing"]:view==="unclassified"?["Unclassified"]:formats],["awareness",aware],["season",seasons],["division",divisions],["editor",null],["strategist",null],["category",null]])$(key+"-bars").innerHTML=barChart(selected,key,labels);
+  personaBreakdown(selected);
+  $("table-title").textContent=viewTitle+" · "+number.format(selected.length);
+  $("table-note").textContent=view==="pipeline"?"Snapshot as of "+stamp.format(new Date(data.asOf))+" ET.":"Select a creative to see its dated milestones and open it in Monday.";
+  $("date-column").textContent=view==="pipeline"?"Due / launch due":"Milestone date";
+  selected.sort((a,b)=>(view==="pipeline"?(a.launchDue||a.due||"9999").localeCompare(b.launchDue||b.due||"9999"):detailDate(b,view,s,e).localeCompare(detailDate(a,view,s,e)))||a.name.localeCompare(b.name));
+  const total=Math.max(1,Math.ceil(selected.length/pageSize));page=Math.min(page,total-1);
+  $("rows").innerHTML=selected.slice(page*pageSize,(page+1)*pageSize).map(i=>'<tr><td><button type="button" data-item="'+esc(i.id)+'">'+esc(i.name)+'</button><small>'+esc([i.code,i.product].filter(Boolean).join(" · "))+'</small></td><td>'+esc(i.division)+'<small>'+esc(i.format)+'</small></td><td>'+esc(i.campaign)+(inSeason(i)?'<small>'+esc(i.season)+'</small>':"")+'</td><td>'+esc(i.awareness)+'<small>'+esc(i.persona)+'</small></td><td>'+esc(view==="pipeline"?[dateLabel(i.due),dateLabel(i.launchDue)].join(" / "):dateLabel(detailDate(i,view,s,e)))+'</td><td>'+esc(i.status)+'<small>'+esc(i.editor)+'</small></td><td>'+esc(i.strategist)+'</td></tr>').join("")||'<tr><td colspan="7" class="empty">No matching creative items.</td></tr>';
+  $("pagination").textContent="Page "+(page+1)+" of "+total;$("prev-page").disabled=page===0;$("next-page").disabled=page>=total-1;
+}
+function showItem(id, reopen=true){
+  const i=rows.find(row=>row.id===id);if(!i)return;
+  $("detail-title").textContent=i.name;
+  const milestones=Object.entries(i.ev).flatMap(([k,entries])=>entries.map(([d,source])=>({d,source,k}))).sort((a,b)=>a.d.localeCompare(b.d));
+  const context=[i.division,formatText(i),i.product,i.category,i.awareness,i.persona].filter(Boolean).join(" · ");
+  const pairs=[["Status",i.status],["Production owner",i.editor],["Strategist",i.strategist],["Production source",i.source],["Campaign",i.campaign],["Seasonal evidence",i.seasonSource],["Persona mapping",i.personaStatus],[i.personaStatus==="Inferred from brief"?"Brief copy evidence":"Brief field",i.personaEvidence],["Secondary persona",i.personaSecondary],["Created",dateLabel(i.created)],["Due",i.due?dateLabel(i.due):""],["Launch due",i.launchDue?dateLabel(i.launchDue):""],["Planned images",i.planned]];
+  $("detail-body").innerHTML="<small>"+esc(context)+"</small><p>"+pairs.filter(([,v])=>v).map(([k,v])=>"<strong>"+esc(k)+"</strong> "+esc(v)).join("<br>")+"</p>"+(i.personaSource?'<p><a href="'+external(i.personaSource)+'" target="_blank" rel="noopener">Open source brief ↗</a></p>':"")+"<h3>Milestones in available dates</h3>"+(milestones.length?"<ul>"+milestones.map(({d,source,k})=>"<li>"+esc(dateLabel(d)+" · "+stages[k]+" · "+source)+"</li>").join("")+"</ul>":"<p>No dated milestones within the available dates.</p>")+'<p><a href="'+external(i.url)+'" target="_blank" rel="noopener">Open item in Monday ↗</a></p>';
+  if(data.live && (i.personaStatus==="Inferred from brief" || (i.persona==="Unmapped" && ["Brief not reviewed","Brief could not be verified"].includes(i.personaStatus)))){
+    $("detail-body").insertAdjacentHTML("beforeend", '<p><button type="button" class="select-view" id="check-brief">Check linked brief for persona</button> <span id="brief-state" role="status"></span></p>');
+    $("check-brief").addEventListener("click",async event=>{
+      event.target.disabled=true;
+      $("brief-state").textContent="Reading brief…";
+      try{
+        const res=await fetch("/api/persona",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({id}),cache:"no-store"});
+        const result=await res.json();
+        if(result.status!=="success"){
+          const status=$("brief-state");
+          if(status&&result.signInPath){const link=document.createElement("a");link.target="_top";link.href=result.signInPath;link.textContent="Connect Google Drive";status.replaceChildren(link);return;}
+          throw new Error(result.message||"The brief could not be read.");
+        }
+        if(i.personaStatus==="Inferred from brief"&&!result.mapping.persona){
+          $("brief-state").textContent="No named persona found. The inferred audience is still shown.";
+          event.target.disabled=false;
+          return;
+        }
+        Object.assign(i,result.mapping);
+        if(!i.persona)i.persona="Unmapped";
+        configure(true);render();
+        if($("check-brief")===event.target)showItem(id,false);
+      }catch(error){
+        const status=$("brief-state");
+        if(status&&$("check-brief")===event.target){status.textContent=error.message;event.target.disabled=false;}
+      }
+    });
+  }
+  if(reopen)$("detail").showModal();
+}
+document.querySelector(".filters").addEventListener("input",event=>{
+  if(event.target?.id==="week"){
+    chooseWeek($("week").value);return;
+  }else if(["from","to"].includes(event.target?.id))reflectWeek();
+  page=0;render();
+});
+document.addEventListener("click",event=>{
+  const target=event.target.closest("button");if(!target)return;
+  if(target.dataset.week){chooseWeek(target.dataset.week);document.querySelector('[data-week="'+target.dataset.week+'"]')?.focus();return;}
+  if(target.dataset.stage){pipelineStatus=target.dataset.stage;view="pipeline";page=0;render();document.querySelector('[data-stage="'+CSS.escape(pipelineStatus)+'"]')?.focus();return;}
+  if(target.dataset.view){view=target.dataset.view;page=0;render();document.querySelector('[data-view="'+view+'"]')?.focus();return;}
+  if(target.dataset.field){const field=$(target.dataset.field);field.value=field.value===target.dataset.value?"":target.dataset.value;page=0;render();if($("more-filters").contains(field))$("more-filters").open=true;field.focus();return;}
+  if(target.dataset.item)showItem(target.dataset.item);
+});
+$("close").addEventListener("click",()=>$("detail").close());
+$("reset").addEventListener("click",()=>{$("from").value=data.start;$("to").value=data.end;for(const k of [...filterFields,"search"])$(k).value="";page=0;view="queued";reflectWeek();render();});
+$("prev-page").addEventListener("click",()=>{page--;render();});$("next-page").addEventListener("click",()=>{page++;render();});
+configure(false);
+render();
+if(data.live){
+  $("live-tools").hidden=false;
+  const main=document.querySelector("main");
+  const initialSnapshot=!!data.snapshot;
+  main.hidden=!initialSnapshot;
+  $("empty-state").hidden=initialSnapshot;
+  if(!initialSnapshot)$("asof").textContent="Sunday–Saturday weeks · Eastern time";
+  let busy=false, retryAt=0, haveReport=initialSnapshot, reloadPending=false;
+  async function refresh(){
+    if(busy||Date.now()<retryAt)return;
+    busy=true;$("refresh").disabled=true;$("connect").hidden=true;
+    $("live-state").textContent=haveReport?"Showing saved data while Monday refreshes…":"Reading Monday…";
+    try{
+      const res=await fetch("/api/report",{method:"POST",headers:{"Content-Type":"application/json"},body:"{}",cache:"no-store"});
+      const result=await res.json();
+      if(result.status!=="success"){
+        if(result.retryAfterMs)retryAt=Date.now()+result.retryAfterMs;
+        if(result.status==="reauthentication_required"&&result.signInPath){$("connect").href=result.signInPath;$("connect").hidden=false;}
+        throw new Error(result.message||"Monday could not be refreshed.");
+      }
+      const followCurrent=!haveReport||($("from").value===data.start&&$("to").value===data.end&&data.start===result.report.start);
+      const followAll=haveReport&&$("week").value==="all";
+      const checked=new Map(rows.filter(i=>i.personaStatus!=="Brief not reviewed").map(i=>[i.id,i]));
+      data={...result.report,live:true};rows=normalizeRows(data);
+      for(const row of rows){
+        const prior=checked.get(row.id);
+        if(prior&&(row.personaStatus==="Brief not reviewed"||(row.personaStatus==="Inferred from brief"&&prior.personaStatus==="Mapped from brief"))){
+          for(const field of ["persona","personaStatus","personaEvidence","personaSource","personaSecondary"])row[field]=prior[field];
+        }
+      }
+
+      configure(haveReport);
+      if(followCurrent){$("from").value=data.start;$("to").value=data.end;}
+      if(followAll){$("from").value=data.min;$("to").value=lastVisibleDay();}
+      reflectWeek();render();main.hidden=false;$("empty-state").hidden=true;haveReport=true;
+      $("live-state").textContent=data.activityMin>data.min?"Updated · earlier status history is limited":"Up to date";
+    }catch(error){
+      $("live-state").textContent=(haveReport?"Showing last available data. ":"")+error.message;
+      if(!haveReport)$("empty-message").textContent=error.message;
+    }finally{
+      busy=false;$("refresh").disabled=false;
+    }
+  }
+  $("refresh").addEventListener("click",refresh);
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&reloadPending){reloadPending=false;refresh();}});
+  setInterval(()=>{if(document.hidden)reloadPending=true;else refresh();},300000);
+  refresh();
+}
+</script>
+</body>
+</html>
