@@ -5,7 +5,7 @@ description: Run Twillory's editorial Facebook Page workflow. Use when Brandon o
 
 # Twillory editorial Facebook Pages
 
-Brandon Wasoski owns the day-to-day workflow. Coordinate with Jack when his Meta access, passkey, or authority to accept commercial terms is needed. Use Twillory-owned styling Pages with distinct names and audiences. Identify Twillory as the operator in the public bio or About section, for example, “Workwear styling ideas from Twillory.” Avoid implied independent coverage, invented editors or readers, and fabricated outside reviews or testimonials.
+Brandon Wasoski owns the day-to-day workflow. Use Brandon’s Meta Business Suite access for routine Page and Planner work. Use Twillory-owned styling Pages with distinct names and audiences. Identify Twillory as the operator in the public bio or About section, for example, “Workwear styling ideas from Twillory.” Avoid implied independent coverage, invented editors or readers, and fabricated outside reviews or testimonials.
 
 ## Start with the existing Pages
 
