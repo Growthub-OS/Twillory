@@ -136,3 +136,8 @@ Updated the [assignment guide](WORKFLOW.md#monday-assignment-guide), [board fiel
 Published the owner-only dashboard update with Hey Parker snapshots for Today and Yesterday, custom ranges up to 31 synced days, manual reload with freshness labels, campaign and strategist breakdowns, multi-select ad-set filters and Creative Testing ACQ hit rate. Documented the controls, reporting dates, refresh schedule, coverage and scoring rules in the [performance guide](.agents/skills/twillory-ad-account-performance-insights/SKILL.md#5-use-the-ad-account-performance-insights-dashboard).
 
 Verified campaign placement coverage and daily reconciliation for November 1–22 Pacific Time. Matched the November 1–15 backfill to Hey Parker and checked campaign and ad-set filtering and strategist hit-rate calculation. November 22 was partial at the time of verification.
+
+
+## Editorial Facebook Pages handoff, November 25, 2026
+
+Added the [Editorial Facebook Pages skill](.agents/skills/twillory-editorial-fb-pages/SKILL.md) for Brandon. Verified that Nine to Nine, Wheels Up Wardrobe, and Worn on Repeat already exist under Twillory in Meta. Page access, operator disclosure, profile and cover assets, and Planner schedules still need verification.
