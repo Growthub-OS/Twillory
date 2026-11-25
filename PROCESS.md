@@ -344,3 +344,8 @@ A team update contains completed actions and actual handoffs only. Do not presen
 - Record the current approved performance-report reference, brand assets and dashboard link.
 - Enable connector access to the new repo when available; browser access already supports documentation.
 - Validate Monday execution on the next authorized real handoff. This documentation update performs no Monday writes and is not a successful live mutation test.
+
+
+## Editorial Facebook Pages
+
+Use the [Editorial Facebook Pages skill](.agents/skills/twillory-editorial-fb-pages/SKILL.md) for Twillory-owned editorial Pages. Brandon owns the workflow. Begin with the existing Pages and their Planner schedules.
